@@ -1,0 +1,42 @@
+/*  Style for CSS Demo  */
+/* 
+Color Scheme:
+#16593A
+#025928
+#F2EFE9
+#F26444
+#F2594B
+*/
+
+
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body{
+    background-color:#16593A;
+    font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  }
+
+  main{
+    background-color:#F26444;
+    width:80vw;
+    margin:40px auto;
+    border:12px solid #F2EFE9;
+    border-radius:20px;
+  }
+
+ header.primary{
+    background-color:#F2EFE9;
+    padding:10px;
+    background-image: url("https://assets.codepen.io/7248/bg_1.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+ }
