@@ -17,6 +17,13 @@ html {
     box-sizing: inherit;
   }
 
+/*-- Utility Classes --*/
+
+.container{
+  padding:20px;
+  margin:auto;
+}
+
   body{
     background-color:#16593A;
     font-family: "Montserrat Alternates", sans-serif;
@@ -26,7 +33,7 @@ html {
   }
 
   main{
-    background-color:#F26444;
+    background-color:#F2594B;
     width:80vw;
     margin:40px auto;
     border:12px solid #F2EFE9;
@@ -39,4 +46,65 @@ html {
     background-image: url("https://assets.codepen.io/7248/bg_1.png");
     background-repeat:no-repeat;
     background-size:cover;
+    display:flex;
+    border-bottom:3px solid #F2EFE9;
  }
+
+header.primary h1, header.primary h2{
+  margin:10px;
+}
+
+ header.primary h1 a{
+  color:#F2EFE9;
+  text-decoration:none;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px #000;
+ }
+
+ header.primary h2 {
+  color:#F2594B;
+  text-shadow: 2px 2px #000;
+ }
+
+header.primary div.hgroup{
+  width:70%;
+}
+
+header.primary nav{
+  width:30%;
+}
+
+ header.primary nav ul li{
+  list-style-type: none;
+  margin-bottom:10px;
+ }
+
+ header.primary nav ul li a{
+border: 1px solid#F26444;
+border-right: 10px solid #F26444;
+border-radius:20px 0;
+color:#F2EFE9;
+display:block;
+background-color:rgba(0,0,0,.10);
+padding: 10px 10px 10px 0;
+text-align:right;
+transition:.5s;
+text-decoration:none;
+ }
+
+ header.primary nav ul li a:hover{
+  background-color:rgba(0,0,0,1);
+  text-decoration:underline;
+ }
+
+#content{
+  line-height:1.5rem;
+}
+
+#content h2, #content h3{
+  color:#F2EFE9;
+  border-bottom:4.5px solid #16593A;
+  border-left:4.5px solid #16593A;
+  padding:4.5px;
+  border-radius:10px 2px;
+}
