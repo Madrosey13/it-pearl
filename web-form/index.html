@@ -6,21 +6,30 @@
   <title>Web Form | Madison Young</title>
   <meta name="description" content="Collection of work for the IT 3610 Class"/>
   <meta name="author" content="Madison Young"/>
-  <link href="assets/css/style.css" rel="stylesheet"/>
+  <link href="assets/css/css/style.css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+
+
 </head>
 <body>
   <main>
     <h2>New Patient Registration</h2>
     <h4>Please fill out the form below</h4>
     <form id="WebForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
-      <label for="Name">First Name: </label>
-      <input type="text" id="Name" name="FirstName" size="30" maxlength="30">
-      <label>Middle Initial: </label>
-      <input type="text" name="MiddleInitial" size="1" maxlength="1">
+      <label class="formlabel" for="Name">First Name: </label>
+      <input type="text" id="Name" name="FirstName" size="30" maxlength="30" data-rule-required="true"  data-msg-required="Name is Required"><br>
+      
+      <label class="formlabel">Middle Initial: </label>
+      <input type="text" name="MiddleInitial" size="1" maxlength="1"><br>
+      
       <label>Last Name: </label>
       <input type="text" name="LastName" size="30" maxlength="30">
+      
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" size="30" maxlength="30">
+      
       <label>Sex:</label>
       <input type="radio" id="male" name="Sex" value="Male">
       <label for="male">Male</label>
@@ -28,10 +37,13 @@
       <label for="female">Female</label>
       <input type="radio" id="n/a" name="Sex" value="N/A">
       <label for="n/a">N/A</label>
+      
       <label for="birthday">Birthday:</label>
       <input type="date" id="birthday" name="birthday" size="8">
+      
       <label for="Height">Height (inches): </label>
       <input type="text" id="Height" name="Height" size="3" maxlength="3">
+     
       <label for="Weight">Weight (pounds): </label>
       <input type="text" id="Weight" name="Weight" size="3" maxlength="3">
 
@@ -39,7 +51,8 @@
 
       <label for="PhoneNumber">Phone Number: </label>
       <input type="text" id="PhoneNumber" name="PhoneNumber" size="14" maxlength="14">
-     <label>Marital Status:</label>
+     
+      <label>Marital Status:</label>
      <select name="MaritalStatus" id="MaritalStatus">
       <option value="">Select a Status...</option>
       <option value="S">Single</option>
@@ -47,10 +60,13 @@
       <option value="D">Divorced</option>
       <option value="W">Widowed</option>
      </select>
-      <label for="Address">Address: </label>
+     
+     <label for="Address">Address: </label>
       <input type="text" id="Address" name="Address" size="30" maxlength="30">
+     
       <label for="City">City:</label>
       <input type="text" id="City" name="City" size="30" maxlength="30">
+     
       <label>State:</label>
         <select name="state" id="state">
           <option value="" selected="selected">Select a State</option>
@@ -106,6 +122,7 @@
           <option value="WI">Wisconsin</option>
           <option value="WY">Wyoming</option>
         </select>
+     
         <label for="Zip">Zip:</label>
         <input type="text" id="Zip" name="Zip" size="5" maxlength="5">
 
@@ -116,7 +133,8 @@
      <label for="Y">Yes</label>
      <input type="radio" id="N" name="Medications" value="N">
      <label for="N">No</label>
-      <label for="MedicationsList">If yes, list medications here:</label>
+     
+     <label for="MedicationsList">If yes, list medications here:</label>
       <textarea id="MedicationsList" rows="3" cols="30"></textarea>
 
     <hr>
@@ -125,3 +143,9 @@
     </form>
   </main>
 </body>
+<script>
+  $( "#WebForm" ).validate({
+  
+  });                    
+  </script>
+</html>
