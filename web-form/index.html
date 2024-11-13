@@ -28,15 +28,15 @@
       <input type="text" name="LastName" size="30" maxlength="30" data-rule-required="true" data-msg-required="Last Name is Required"><br>
       
       <label class="formlabel" for="email">Email:</label>
-      <input type="email" id="email" name="email" size="30" maxlength="30" data-rule-email="true" data-msg-required="Valid Email is Required"><br>
+      <input type="email" id="email" name="email" size="30" maxlength="30" data-rule-required="true" data-msg-required="Email is Required" data-rule-email="true" data-msg-required="Valid Email is Required"><br>
       
       <label class="formlabel">Sex:</label>
-      <input type="radio" id="male" name="Sex" value="Male">
-      <label for="male" data-rule-required="true" data-msg-required="This field is Required">Male</label>
+      <input type="radio" id="male" name="Sex" value="Male" data-rule-required="true" data-msg-required="This field is Required">
+      <label for="male">Male</label>
       <input type="radio" id="female" name="Sex" value="Female">
       <label for="female">Female</label>
       <input type="radio" id="n/a" name="Sex" value="N/A">
-      <label for="n/a">N/A</label><br>
+      <label for="n/a" >N/A</label><br>
       
       <label class="formlabel" for="birthday">Birthday:</label>
       <input type="date" id="birthday" name="birthday" size="8"><br>
@@ -53,7 +53,7 @@
       <input type="text" id="PhoneNumber" name="PhoneNumber" size="14" maxlength="14"><br>
      
       <label class="formlabel">Marital Status:</label>
-     <select name="MaritalStatus" id="MaritalStatus">
+     <select name="MaritalStatus" id="MaritalStatus" data-rule-required="true" data-msg-required="Marital Status is Required">
       <option value="">Select a Status...</option>
       <option value="S">Single</option>
       <option value="M">Married</option>
@@ -67,8 +67,8 @@
       <label class="formlabel" for="City">City:</label>
       <input type="text" id="City" name="City" size="30" maxlength="30">
      
-      <label class="formlabel">State:</label>
-        <select name="state" id="state">
+      <label><strong>State:</strong></label>
+        <select name="state" id="state" data-rule-required="true" data-msg-required="State is Required">
           <option value="" selected="selected">Select a State</option>
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
@@ -123,7 +123,7 @@
           <option value="WY">Wyoming</option>
         </select>
      
-        <label class="formlabel" for="Zip">Zip:</label>
+        <label for="Zip"><strong>Zip:</strong></label>
         <input type="text" id="Zip" name="Zip" size="5" maxlength="5"><br>
 
     <hr>
