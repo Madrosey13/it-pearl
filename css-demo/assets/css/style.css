@@ -17,6 +17,9 @@ html {
     box-sizing: inherit;
   }
 
+  img{
+    max-width:100%;
+  }
 /*-- Utility Classes --*/
 
 .container{
@@ -101,10 +104,72 @@ text-decoration:none;
   line-height:1.5rem;
 }
 
-#content h2, #content h3{
+#content h2, #content h3, article.widget h2{
   color:#F2EFE9;
   border-bottom:4.5px solid #16593A;
   border-left:4.5px solid #16593A;
   padding:4.5px;
   border-radius:10px 2px;
+}
+
+#blog{
+background-color:#025928;
+padding:20px 0;
+border-top:10px double #F2EFE9;
+border-bottom:10px double #F2EFE9;
+}
+
+#blog > h2{
+  color:#F2EFE9;
+  font-size:2.2rem;
+  margin-left:20px;
+  border-left:4.5px solid #F26444;
+  border-bottom:4.5px solid #F26444;
+  padding:4.5px;
+  border-radius:10px 2px;
+}
+
+#blog article.post{
+background-color:#16593A;
+margin:20px;
+padding:20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-template-rows:auto;
+grid-template-areas:
+  "figure header"
+  "figure post-content"
+  "figure footer";
+}
+
+#blog article figure{
+grid-area:figure;
+margin:0 20px 0 0;
+}
+
+#blog article header{
+grid-area:header;
+}
+
+#blog article.post-content{
+grid-area:post-content;
+}
+
+#blog article.post-meta{
+grid-area:footer;
+}
+
+aside .container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+#colophon{
+  text-align:center;
+  background-image: url("https://assets.codepen.io/7248/bg_1.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  color:#F2EFE9;
+  padding:20px;
 }
