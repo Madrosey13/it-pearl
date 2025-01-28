@@ -60,9 +60,9 @@ html {
 
 #hyperlinks ul li a{
     text-decoration:none;
-    color:#3d3636;
+    color:bisque;
     background-color:#07a;
-    background-color:rgba(33, 33, 80, 0.377);
+    background-color:rgba(7, 7, 23, 0.377);
     border:3px dotted rgb(54, 255, 205);
     padding:3px 11px;
     border-radius:30px;
