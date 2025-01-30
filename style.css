@@ -32,7 +32,7 @@ nav ul li a{
     border:3px dotted #ffc38e;
     padding:2px 5px;
     border-radius:10px;
-    transition:0.2s;
+    transition:0.1s;
 }
 
 nav ul li a:hover{
