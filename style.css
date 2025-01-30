@@ -1,0 +1,50 @@
+/*---Style for Portfolio Homepage---*/
+body{
+    background-color:#ffc38e;
+    font-family: 'Pacifico', cursive;
+    margin:20px;
+}
+
+header.primary{
+    color:#f27405;
+    text-align:center;
+    font-size:2.1rem;
+    padding:20px 30px;
+    border-bottom: 3px dashed #f27405;
+}
+
+nav h3{
+    font-size:1.5rem;
+    color:aliceblue;
+    text-decoration-line: underline;
+}
+
+nav ul li{
+    margin:13px auto;
+}
+
+nav ul li a{
+    text-decoration:none;
+    text-decoration:none;
+    color:aliceblue;
+    background-color:#07a;
+    background-color:rgba(7, 7, 23, 0.377);
+    border:3px dotted #ffc38e;
+    padding:2px 5px;
+    border-radius:10px;
+    transition:0.2s;
+}
+
+nav ul li a:hover{
+    background-color:rgba(255, 94, 0, 0.9);
+    color:#f5f2f0;
+}
+
+#colophon{
+    background-color:aliceblue;
+    color:#f27405;
+    margin:10px auto;
+    text-align:center;
+    padding:10px 10px;
+    font-size:1.1rem;
+}
