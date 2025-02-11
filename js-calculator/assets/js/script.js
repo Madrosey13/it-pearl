@@ -30,7 +30,7 @@ function calculate() {
         if (document.getElementById("DivOperator").checked){
             operator = document.getElementById("DivOperator").value;
         }
-        }
+        
 
         let result;
         
@@ -53,7 +53,7 @@ function calculate() {
         /* convert the result to a string and display it */
         document.getElementById("Result").innerHTML = result.toString();
     }
-
+}
 function clearform() {
 
     document.getElementById("Operand1").value = "";
