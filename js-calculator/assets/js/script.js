@@ -1,9 +1,13 @@
+"use strict";
+$( "#jscalculator" ).validate({
+
+});
+
 function calculate() {
-    "use strict";
-    /* Make sure that the form is valid */
-    if ($( "#myform" ).valid()) {
+    
+
+    if ($( "#jscalculator" ).valid()) {
         
-        /* get the operands from the form */
         let operand1 = document.getElementById("Operand1").value;
         let operand2 = document.getElementById("Operand2").value;
         
@@ -30,17 +34,14 @@ function calculate() {
 
         let result;
         
-        /* if the operator was "Min" then set result to the minimum */
         if (operator == "Add") {
             result = (operand1fp + operand2fp);
         }
  
-        /* if the operator was "Max" then set result to the maximum */
         if (operator == "Sub") {
             result = (operand1fp - operand2fp);
         }
 
-        /* if operator was "Avg" the calcualute the average of 3 operands */
         if (operator == "Mul") {
             result = (operand1fp * operand2fp);
         }
@@ -54,14 +55,11 @@ function calculate() {
     }
 
 function clearform() {
-    
-    /* Set all of the form values to blank or false */
+
     document.getElementById("Operand1").value = "";
     document.getElementById("Operand2").value = "";
-    document.getElementById("Operand3").value = "";
     document.getElementById("Operand1Error").innerHTML = "";
     document.getElementById("Operand2Error").innerHTML = "";
-    document.getElementById("Operand3Error").innerHTML = "";
     document.getElementById("AddOperator").checked = false;
     document.getElementById("SubOperator").checked = false;
     document.getElementById("MulOperator").checked = false;
@@ -71,6 +69,6 @@ function clearform() {
 }
 
 /* Form Validation */
-$( "#myform" ).validate({
+$( "#jscalculator" ).validate({
  
 });
