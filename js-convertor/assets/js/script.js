@@ -13,7 +13,7 @@ function calculate() {
         // From Unit Operator
         let operator1;
         if (document.getElementById("CMOperator").checked) {
-            operator1 = document.getElementById("MOperator").value;
+            operator1 = document.getElementById("CMOperator").value;
         }
         if (document.getElementById("MOperator").checked) {
             operator1 = document.getElementById("MOperator").value;
@@ -37,7 +37,7 @@ function calculate() {
         //To Unit Operator
         let operator2;
         if (document.getElementById("CMOperator2").checked) {
-            operator1 = document.getElementById("MOperator2").value;
+            operator1 = document.getElementById("CMOperator2").value;
         }
         if (document.getElementById("MOperator2").checked) {
             operator1 = document.getElementById("MOperator2").value;
@@ -70,7 +70,7 @@ async function CalculateResult(operand, operator1, operator2) {
         let myURL = "https://brucebauer.info/assets/ITEC3650/unitsconversion.php";
 
         /* AJAX calculator requires Operand1, Operator, and Operand2 */
-        myURL = myURL + "?Operand=" + encodeURIComponent(operand) + "&Operator=" + encodeURIComponent(operator1) + "&Operator2=" + encodeURIComponent(operator2);
+        myURL = myURL + "?Operand=" + encodeURIComponent(operand) + "&Operator1=" + encodeURIComponent(operator1) + "&Operator2=" + encodeURIComponent(operator2);
 
         /* fetch the results */
         let myCalcObject = await fetch(myURL);
