@@ -11,66 +11,65 @@ function calculate() {
         let operand = document.getElementById("Operand").value;
 
         // From Unit Operator
-        let operator1;
+        let operator;
         if (document.getElementById("CMOperator").checked) {
-            operator1 = document.getElementById("CMOperator").value;
+            operator = document.getElementById("CMOperator").value;
         }
         if (document.getElementById("MOperator").checked) {
-            operator1 = document.getElementById("MOperator").value;
+            operator = document.getElementById("MOperator").value;
         }
         if (document.getElementById("KMOperator").checked) {
-            operator1 = document.getElementById("KMOperator").value;
+            operator = document.getElementById("KMOperator").value;
         }
         if (document.getElementById("INOperator").checked) {
-            operator1 = document.getElementById("INOperator").value;
+            operator = document.getElementById("INOperator").value;
         }    
         if (document.getElementById("FTOperator").checked) {
-            operator1 = document.getElementById("FTOperator").value;
+            operator = document.getElementById("FTOperator").value;
         }    
         if (document.getElementById("YDOperator").checked) {
-            operator1 = document.getElementById("YDOperator").value;
+            operator = document.getElementById("YDOperator").value;
         }
         if (document.getElementById("MIOperator").checked) {
-            operator1 = document.getElementById("MIOperator").value;
+            operator = document.getElementById("MIOperator").value;
         }
         
         //To Unit Operator
         let operator2;
         if (document.getElementById("CMOperator2").checked) {
-            operator1 = document.getElementById("CMOperator2").value;
+            operator2 = document.getElementById("CMOperator2").value;
         }
         if (document.getElementById("MOperator2").checked) {
-            operator1 = document.getElementById("MOperator2").value;
+            operator2 = document.getElementById("MOperator2").value;
         }
         if (document.getElementById("KMOperator2").checked) {
-            operator1 = document.getElementById("KMOperator2").value;
+            operator2 = document.getElementById("KMOperator2").value;
         }
         if (document.getElementById("INOperator2").checked) {
-            operator1 = document.getElementById("INOperator2").value;
+            operator2 = document.getElementById("INOperator2").value;
         }    
         if (document.getElementById("FTOperator2").checked) {
-            operator1 = document.getElementById("FTOperator2").value;
+            operator2 = document.getElementById("FTOperator2").value;
         }    
         if (document.getElementById("YDOperator2").checked) {
-            operator1 = document.getElementById("YDOperator2").value;
+            operator2 = document.getElementById("YDOperator2").value;
         }
         if (document.getElementById("MIOperator2").checked) {
-            operator1 = document.getElementById("MIOperator2").value;
+            operator2 = document.getElementById("MIOperator2").value;
         }
         
 
-        CalculateResult(operand, operator1, operator2);
+        CalculateResult(operand, operator, operator2);
     }
 }
 
-async function CalculateResult(operand, operator1, operator2) {
+async function CalculateResult(operand, operator, operator2) {
     "use strict;"
         
-        // URL and method used with AJAX Call
         let myURL = "https://brucebauer.info/assets/ITEC3650/unitsconversion.php";
 
-        /* AJAX calculator requires Operand1, Operator, and Operand2 */
-        myURL = myURL + "?Operand=" + encodeURIComponent(operand) + "&Operator1=" + encodeURIComponent(operator1) + "&Operator2=" + encodeURIComponent(operator2);
+        /* AJAX calculator requires Operand, Operator, and Operand2 */
+        myURL = myURL + "?Operand=" + encodeURIComponent(operand) + "&Operator1=" + encodeURIComponent(operator) + "&Operator2=" + encodeURIComponent(operator2);
 
         /* fetch the results */
         let myCalcObject = await fetch(myURL);
@@ -78,7 +77,7 @@ async function CalculateResult(operand, operator1, operator2) {
         
         document.getElementById("Result").innerHTML = myResult;
 }
-
+//Clear the funtion
 function clearform() {
     "use strict";
     
@@ -93,7 +92,7 @@ function clearform() {
     document.getElementById("FTOperator").checked = false;
     document.getElementById("YDOperator").checked = false;
     document.getElementById("MIOperator").checked = false;
-    document.getElementById("Operator1Msg").innerHTML = "";
+    document.getElementById("OperatorMsg").innerHTML = "";
 
     document.getElementById("CMOperator2").checked = false;
     document.getElementById("MOperator2").checked = false;
