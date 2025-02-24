@@ -1,17 +1,26 @@
 /*---Style for Portfolio Homepage---*/
-body{
+html{
+    box-sizing:border-box;
+}
+
+*,*:before, *:after{
+    box-sizing:inherit;
+}
+
+main{
+    margin:auto;
     background-color:#ffc38e;
     font-family: 'Pacifico', cursive;
-    margin:20px;
+    padding:10px;
 }
 
 header.primary{
     color:#f27405;
     text-align:center;
     font-size:2.1rem;
-    padding:20px 30px;
     border-bottom: 3px dashed #f27405;
 }
+
 
 nav h3{
     font-size:1.5rem;
@@ -41,8 +50,7 @@ nav ul li a:hover{
 }
 
 #colophon{
-    background-color:aliceblue;
-    color:#f27405;
+    color:#f5f2f0;
     margin:10px auto;
     text-align:center;
     padding:10px 10px;
