@@ -1,5 +1,50 @@
-/*--THIS IS A TEST TO SEE IF THE CSS IS WORKING */
-header.primary{
-    background-color:darkgrey;
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-family:'Outfit', sans-serif;
+    font-optical-sizing: auto;
+    background-color:aquamarine;
 }
-/*--THIS IS A TEST TO SEE IF THE CSS IS WORKING */
+
+header.primary{
+    color:aliceblue;
+    background-color:black;
+    padding:10px;
+}
+
+nav ul{
+    list-style-type:none;
+    margin-left: 10px;
+}
+
+nav ul li{
+    height:35px;
+    line-height:35px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:aliceblue;
+    background-color:#07a;
+    background-color:rgba(7, 7, 23, 0.377);
+    padding:3px 11px;
+    border-radius:30px;
+    transition:0.2s;
+}
+
+nav ul li a:hover{
+    background-color:rgb(128, 63, 26);
+    color:rgb(255, 255, 255);
+}
+
+header h1 a{
+    text-decoration:none;
+    color:aliceblue;
+}
