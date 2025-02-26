@@ -1,3 +1,4 @@
+/*HTML Sizing*/
 html {
     box-sizing: border-box;
   }
@@ -10,44 +11,71 @@ html {
 body{
     font-family:'Outfit', sans-serif;
     font-optical-sizing: auto;
-    background-color:aquamarine;
+    margin:auto;
+}
+main{
+    width:80vw;
+
+    margin: 40px 20px 40px 20px;
 }
 
+/*Header*/
 header.primary{
     color:aliceblue;
     background-color:black;
-    padding:10px;
-}
-
-nav ul{
-    list-style-type:none;
-    margin-left: 10px;
+    padding:20px;
+    width:100%;
     display:flex;
-    flex-direction:column;
-    justify-content:space-around;
 }
 
-nav ul li{
-    height:35px;
-    line-height:35px;
-}
-
-nav ul li a{
+header.primary h1 a{
     text-decoration:none;
     color:aliceblue;
-    background-color:#07a;
-    background-color:rgba(7, 7, 23, 0.377);
-    padding:3px 11px;
-    border-radius:30px;
-    transition:0.2s;
+    font-size:2.4rem;
+    width:30%;
 }
 
-nav ul li a:hover{
-    background-color:rgb(128, 63, 26);
-    color:rgb(255, 255, 255);
-}
-
-header h1 a{
+header.primary h2 a{
     text-decoration:none;
     color:aliceblue;
+}
+
+header.primary nav{
+    width:20%;
+}
+
+header.primary nav ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+header.primary nav ul li{
+    margin-bottom:10px;
+}
+
+header.primary nav ul li a{
+    border:1px solid aliceblue;
+    border-left:10px solid aliceblue;
+    background-color:aliceblue;
+    border-radius:10px;
+    color:black;
+    display:block;
+    padding:10px 10px 10px 0;
+    text-align:right;
+    transition:.2s;
+    font-size:.9rem;
+    text-decoration:none;
+}
+
+ header.primary nav ul li a:hover{
+    background-color:black;
+    color:aliceblue;
+    text-decoration:underline;
+}
+
+article header h3{
+    border-left:3px solid black;
+    border-bottom:3px solid black;
+    padding:6px;
 }
