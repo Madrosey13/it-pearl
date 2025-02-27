@@ -13,13 +13,12 @@ body{
     font-optical-sizing: auto;
     margin:auto;
 }
-main{
-    width:80vw;
-
+main, footer{
+    width:90vw;
     margin: 40px 20px 40px 20px;
 }
 
-/*Header*/
+/*HEADER*/
 header.primary{
     color:aliceblue;
     background-color:black;
@@ -55,8 +54,7 @@ header.primary nav ul li{
 }
 
 header.primary nav ul li a{
-    border:1px solid aliceblue;
-    border-left:10px solid aliceblue;
+    border:5px solid aliceblue;
     background-color:aliceblue;
     border-radius:10px;
     color:black;
@@ -78,4 +76,30 @@ article header h3{
     border-left:3px solid black;
     border-bottom:3px solid black;
     padding:6px;
+}
+
+
+
+
+
+
+
+
+/*FOOTER*/
+#colophon{
+    color:aliceblue;
+    background-color:black;
+    padding:20px;
+    margin:auto;
+    width:100%;
+    display:flex;
+}
+
+#colophon nav ul{
+    list-style-type:none;
+}
+
+#colophon nav ul li a{
+    text-decoration:none;
+    color:aliceblue;
 }
