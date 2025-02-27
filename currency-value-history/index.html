@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Polygon - Company Details">
+    <meta name="keywords" content="HTML, CSS,JavaScript, AJAX, jQuery">
+    <meta name="author" content="Bruce Bauer">
+    <title>Currency Value History Converter</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="myform" onsubmit="return false">
+        <div class="formcontainer">
+            <h2>Currency Value History</h2>
+            <label for="StockSymbol" class="formlabel" >Enter Symbol: </label>
+            <input type="text" id="StockSymbol" name="StockSymbol" size="6" maxlength="6"
+                    data-rule-required="true"  data-msg-required="Value is Required">
+            <label class="error" for="StockSymbol" id="StockSymbolError"></label>
+            <br><br>
+            <input type="submit" value="DisplayStock" id="DisplayStock" name="DisplayStock" onclick="GetStock();">
+            <input type="submit" formnovalidate value="Clear" id="Clear" name="Clear" onclick="ClearForm();">
+            <hr>
+            <br>
+            <label for="company" class="formlabel">Company: </label>
+            <span id="company"></span><br>
+            <label for="address" class="formlabel">Address: </label>
+            <span id="address"></span><br>
+            <label for="employees" class="formlabel">Employees: </label>
+            <span id="employees"></span><br>
+            <label for="description" class="formlabel">Description: </label>
+            <span id="description"></span><br>
+            <label for="url" class="formlabel">URL: </label>
+            <a id="url"></a><br>
+        </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
