@@ -8,6 +8,11 @@ html {
     box-sizing: inherit;
   }
 
+  img{
+    max-width:100%;
+    height:auto;
+  }
+
 body{
     font-family:'Outfit', sans-serif;
     font-optical-sizing: auto;
@@ -81,7 +86,6 @@ article header h3{
 p{
     text-indent:5ch;
 }
-
 
 /*FOOTER*/
 #colophon{
