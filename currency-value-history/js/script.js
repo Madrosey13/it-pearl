@@ -2,12 +2,11 @@ async function GetStock() {
     "use strict";
 
     // Get a reference to the form - Use the ID of the form
-    let form = $("#myform");
+    let form = $("#currency");
     
       // If all of the form elements are valid, the get the form values
     if (form.valid()) {
         
-        let StockSymbol = document.getElementById("StockSymbol").value;
         let fromcurrency= "USD"
         let tocurrency= "EUR"
         let fromdate= "2025-02-18"
@@ -15,7 +14,7 @@ async function GetStock() {
         let apiKey = "35eaVfKsObXpSg2O4kMLj9udr2DgVW1f"
 
         /* URL for AJAX Call https://api.polygon.io/v2/aggs/ticker/C:EURUSD/range/1/day/2023-01-09/2023-02-10?adjusted=true&sort=asc&apiKey= **/
-        let myURL1 = "https://api.polygon.io/v2/aggs/ticker/C:" + fromcurrency + tocurrency + "/range/1/day/"+fromdate + "/"+todate+"?adjusted=true&sort=asc&apiKey="+apiKey;
+        let myURL1 = "https://api.polygon.io/v2/aggs/ticker/C:" + fromcurrency + tocurrency + "/range/1/day/" + fromdate + "/" + todate +"?adjusted=true&sort=asc&apiKey=" + apiKey;
         /* Make the AJAX call */
         let msg1Object = await fetch(myURL1);
         /* Check the status */
