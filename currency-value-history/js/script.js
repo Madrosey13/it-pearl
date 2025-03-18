@@ -7,11 +7,48 @@ async function GetStock() {
       // If all of the form elements are valid, the get the form values
     if (form.valid()) {
         
-        let fromcurrency= "USD"
-        let tocurrency= "EUR"
-        let fromdate= "2025-02-18"
-        let todate= "2025-02-21"
-        let apiKey = "35eaVfKsObXpSg2O4kMLj9udr2DgVW1f"
+        function fetchCurrencyData(){
+            const fromCurrency = document.getElementById("fromCurrency").value;
+            const toCurrency = document.getElementById("toCurrency").value;
+            const fromDate = document.getElementById("fromDate").value;
+            const toDate = document.getElementById("toDate").value;
+
+            const apiKey = "YOUR_API_KEY";
+            const url = "https://api.polygon.io/v2/aggs/ticker/C:${fromCurrency}${toCurrency}/range/1/day/${fromDate}/${toDate}?apiKey=${apiKey}";
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    renderChart(data);
+                })
+                .catch(error => console.error("Error fetching data:", error));
+        }
+
+        function renderChart(data){
+            const ctx = document.getElementById("currencyChart").getContext("2d");
+            const labels = data.results.map(entry => entry.t);
+            const values = data.results.map(entry => entry.c);
+
+            new Chart(ctx, {
+                type:"line",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                    data: values,
+                    borderColor: "blue",
+                    borderWidth: 1
+                    }]
+                },
+                options:{
+                    responsive: true,
+                    scales: {
+                        x: {title: {display: true, text: "Date"}},
+                        y: {title: {display: true, text: "Value"}}
+                    }
+                }
+            });
+        }
 
         /* URL for AJAX Call https://api.polygon.io/v2/aggs/ticker/C:EURUSD/range/1/day/2023-01-09/2023-02-10?adjusted=true&sort=asc&apiKey= **/
         let myURL1 = "https://api.polygon.io/v2/aggs/ticker/C:" + fromcurrency + tocurrency + "/range/1/day/" + fromdate + "/" + todate +"?adjusted=true&sort=asc&apiKey=" + apiKey;

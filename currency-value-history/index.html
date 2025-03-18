@@ -13,43 +13,40 @@
     <form id="currency" onsubmit="return false">
         <div class="formcontainer">
             <h2>Currency Value History</h2>
-            <label for="StockSymbol" class="formlabel" >Base Currency: </label>
-            <input type="text" id="StockSymbol" name="StockSymbol" size="6" maxlength="6"
-                    data-rule-required="true"  data-msg-required="Value is Required">
-            <label class="error" for="StockSymbol" id="StockSymbolError"></label>
-            <br><br>
-            <input type="submit" value="DisplayStock" id="DisplayStock" name="DisplayStock" onclick="GetStock();">
-            <input type="submit" formnovalidate value="Clear" id="Clear" name="Clear" onclick="ClearForm();">
-            <hr>
-            <br>
-            <label for="company" class="formlabel">Company: </label>
-            <span id="company"></span><br>
-            <label for="address" class="formlabel">Address: </label>
-            <span id="address"></span><br>
-            <label for="employees" class="formlabel">Employees: </label>
-            <span id="employees"></span><br>
-            <label for="description" class="formlabel">Description: </label>
-            <span id="description"></span><br>
-            <label for="url" class="formlabel">URL: </label>
-            <a id="url"></a><br>
-            <div class="clearfix">
-                <div class="img-container">
-                    <span id="StockValueTable"></span>
-                </div>
-                <div class="img-container">
-                    <span id="StockVolumeTable"></span>
-                </div>
-            </div>
-            <hr>
-            
-            <div class="clearfix">
-                <div class="img-container">
-                    <canvas id="chartjs-0" width="400" height="400"></canvas>
-                </div>
-                <div class="img-container">
-                    <canvas id="chartjs-1" width="400" height="400"></canvas>
-                </div>
-            </div>
+            <label for="baseCurrency" class="formlabel" >Base Currency: </label>
+            <select id="baseCurrency" name="baseCurrency" required>
+                <option value="" disabled selected>Select a Currency...</option>
+                <option value="USD">US Dollar</option>
+                <option value="EUR">Euro</option>
+                <option value="JYP">Yen</option>
+                <option value="GBP">Pound</option>
+            </select>
+            <small class="error-message">Base Currency is Required</small>
+        </div>
+        <div class="form-group">
+            <label for="convertToCurrency">Convert to Currency:</label>
+            <select id="convertToCurrency" name="convertToCurrency" required>
+                <option value="" disabled selected>Select a Currency...</option>
+                <option value="USD">US Dollar</option>
+                <option value="EUR">Euro</option>
+                <option value="JYP">Yen</option>
+                <option value="GBP">Pound</option>
+            </select>
+            <small class="error-message">Convert to Currency is required</small>
+        </div>
+        <div class="from-group">
+            <label for="fromDate">From Date:</label>
+            <input type="date" id="fromDate" name="fromDate" required>
+            <small class="error-message">From Date is Required</small>
+        </div>
+        <div class="from-group">
+            <label for="toDate">To Date:</label>
+            <input type="date" id="toDate" name="toDate" required>
+            <small class="error-message">To Date is Required</small>
+        </div>
+        <div class="form-buttons">
+            <button type="submit">Show Results</button>
+            <button type="reset">Clear</button>
         </div>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
