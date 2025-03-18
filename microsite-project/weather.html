@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Micro Site Project - Pea Ridge National Military Park</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Project about building a site from scratch" />
+  <meta name="viewport" content="width=device-width, intital-scale=1"/>
+  <meta name="author" content="Madison Young" />
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+</head>
+
+<body>
+  <header role="banner" class="primary">
+    <h1><a href="index.html">Pea Ridge National Military Park</a></h1>
+    <nav role="navigation">
+      <ul>
+        <li><a href="../microsite-project/history.html"><strong>History and Culture</strong></a></li>
+        <li><a href="../microsite-project/landmarks.html"><strong>Noteable Landmarks</strong></a></li>
+        <li><a href="../microsite-project/faq.html"><strong>Frequently Asked Questions</strong></a></li>
+        <li><a href="../microsite-project/weather.html"><strong>Weather</strong></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+  <section id="content" class="container">
+    <h2>Know before you go</h2>
+    <p>Pea Ridge National Military Park is located in northern Arknansas, and is prone to experiencing unstable weather. Here we have a forcasting function to help prepare you before planning your trip.</p>
+    <p>This does not replace looking at the news and weather.</p>
+        <form id="myform">
+            <div class="formcontainer">
+                <h4>Weather Forecast</h4>
+                <label class="formlabel" for="location"> Enter Location:</label>
+                <input type="text" id="location" name="Location" size="30" maxlength="30" value="Arkansas" data-rule-required="true" data-msg-required="Location is Required"><br>
+                <input type="button" value="DisplayTemp" id="DisplayTemp">
+                <input type="button" value="Clear" id="Clear" name="Clear" onclick="clearForm();">
+            </div>
+        </form>
+        <div id="location-info"></div>
+        <div id="forecast-container">
+            <div id="forecast-table"></div>
+            <canvas id="forecast-chart"></canvas>
+        </div>
+</main>
+<footer id="colophon" role="contentinfo">
+  <h6>&copy; 2025 Madison Young</h6>
+  <nav id="secondary-nav">
+    <ul>
+      <li><a href="../microsite-project/index.html">HOME</a></li>
+      <li><a href="../microsite-project/faq.html">FAQ</a></li>
+      <li><a href="https://www.nps.gov/index.htm">National Park Service</a></li>
+      <li><a href="https://www.arkansasstateparks.com/">Arkansas State Parks</a></li>
+    </ul>
+  </nav>
+</footer>
+  <script src="../microsite-project/assets/js/script.js"></script>
+</body>
+</html>
