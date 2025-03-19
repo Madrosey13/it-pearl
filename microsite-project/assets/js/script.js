@@ -73,9 +73,23 @@ async function getWeatherForecast(){
                             }
                         }
                     });
+                } else{
+                    alert("Failed to fetch weatherdata.");
                 }
+            } else{
+                alert("Failed to fetch location data.");
             }
         }
+    }
 
+    function clearForm(){
+        "use strict";
+        document.getElementById("location").value = "";
+        document.getElementById("location-info").innerHTML = "";
+        document.getElementById("forecast-table").innerHTML = "";
 
-};
+        if (window.myChart) {
+            window.myChart.destroy();
+        }
+    }
+
