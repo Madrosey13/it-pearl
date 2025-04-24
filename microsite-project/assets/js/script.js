@@ -92,4 +92,4 @@ async function getWeatherForecast(){
             window.myChart.destroy();
         }
     }
-
+}
